@@ -46,7 +46,7 @@
 body {
   font-family: "Signika", sans-serif;
   color: var(--neutral-900);
-  background: var(--neutral-100);
+  background: var(--neutral-200);
   line-height: 1.5;
   overflow-x: hidden;
   padding-bottom: 50px;
@@ -152,4 +152,43 @@ p {
   right: -15px;
   border-width: 4px 0 4px 8px;
   border-color: transparent transparent transparent var(--primary-300);
+}
+
+@media (max-width: 900px) {
+  #timeline ul li div {
+    width: 250px;
+  }
+
+  #timeline ul li:nth-child(even) div {
+    left: -284px;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 640px) {
+  #main-header {
+    padding: 2rem 0;
+  }
+
+  #main-header h1 {
+    font-size: 42px;
+  }
+
+  #timeline ul li {
+    margin-left: 20px;
+  }
+
+  #timeline ul li div {
+    width: calc(100vw - 150px);
+  }
+
+  #timeline ul li:nth-child(even) div {
+    left: 40px;
+  }
+
+  #timeline ul li:nth-child(even) div::before {
+    left: -15px;
+    border-width: 4px 8px 4px 0;
+    border-color: transparent var(--primary-300) transparent transparent;
+  }
 }
