@@ -134,8 +134,22 @@ p {
 #timeline div::before {
   content: "";
   position: absolute;
-  bottom: 5px;
+  bottom: 12px;
   width: 0;
   height: 0;
   border-style: solid;
+}
+
+/* Right Arrows */
+#timeline ul li:nth-child(odd) div::before {
+  left: -15px;
+  border-width: 4px 8px 4px 0;
+  border-color: transparent var(--primary-300) transparent transparent;
+}
+
+/* Left Arrows */
+#timeline ul li:nth-child(even) div::before {
+  right: -15px;
+  border-width: 4px 0 4px 8px;
+  border-color: transparent transparent transparent var(--primary-300);
 }
