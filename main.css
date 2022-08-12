@@ -126,10 +126,10 @@ p {
   bottom: 0;
   width: 25px;
   height: 25px;
-  background: var(--accent-200);
+  background: inherit;
   transform: translateX(-50%);
   border-radius: 50%;
-  border: 4px solid var(--accent-700);
+  border: 4px solid inherit;
   transition: all 0.5s ease-in-out;
   transition-property: background, border;
 }
@@ -163,6 +163,11 @@ p {
   transform: none;
   visibility: visible;
   opacity: 1;
+}
+
+#timeline ul li.show::after {
+  background: var(--accent-200);
+  border: 4px solid var(--accent-700);
 }
 
 @media (max-width: 900px) {
