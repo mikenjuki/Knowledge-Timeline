@@ -102,18 +102,20 @@ p {
   padding: 1rem;
   background: var(--primary-300);
   transition: all 0.5s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
+  /* visibility: hidden;
+  opacity: 0; */
 }
 
 /* Right side */
 #timeline ul li:nth-child(odd) div {
   left: 40px;
+  transform: translate(200, 0);
 }
 
 /* Left side */
 #timeline ul li:nth-child(even) div {
-  right: 340px;
+  left: -340px;
+  transform: translate(-200, 0);
 }
 
 /* Dots */
